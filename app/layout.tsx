@@ -1,0 +1,39 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { ReduxProvider } from '@/components/ReduxProvider';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'LINE Rich Menu Maker',
+  description: 'Create, edit, and manage your LINE rich menus with ease',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <ReduxProvider>
+          <div className="min-h-screen flex flex-col">
+            <div>
+              <Navbar />
+            </div>
+
+            <main className="flex-1">
+              {children}
+            </main>
+
+            <Footer />
+          </div>
+        </ReduxProvider>
+      </body>
+    </html>
+  )
+}
