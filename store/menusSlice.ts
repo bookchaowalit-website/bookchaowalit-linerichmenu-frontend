@@ -73,7 +73,7 @@ export const deleteMenu = createAsyncThunk<number, number, { rejectValue: string
   }
 });
 
-const menusSlice = createSlice<MenusState>({
+const menusSlice = createSlice({
   name: 'menus',
   initialState,
   reducers: {},

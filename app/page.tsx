@@ -154,7 +154,7 @@ export default function Home() {
     try {
       await dispatch(updateMenu(menu)).unwrap();
       showNotification('success', 'Menu saved successfully!');
-      dispatch(closeEditor());
+      dispatch(closeEditor(undefined as any));
       dispatch(fetchMenus());
     } catch (err: any) {
       console.error('Error saving menu:', err);
@@ -186,7 +186,7 @@ export default function Home() {
             menu={editorState.localMenu}
             onSave={handleSaveMenu}
             onCancel={() => {
-              dispatch(closeEditor());
+              dispatch(closeEditor(undefined as any));
             }}
           />
         </div>

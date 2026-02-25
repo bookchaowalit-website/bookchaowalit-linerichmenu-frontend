@@ -39,9 +39,9 @@ export const saveMenu = createAsyncThunk<RichMenu, RichMenu, { rejectValue: stri
   }
 );
 
-const editorSlice = createSlice<EditorState>({
+const editorSlice = createSlice({
   name: 'editor',
-  initialState,
+  initialState: initialState as EditorState,
   reducers: {
     openEditorWithMenu(state: EditorState, action: PayloadAction<RichMenu | undefined>) {
       state.localMenu = action.payload;
