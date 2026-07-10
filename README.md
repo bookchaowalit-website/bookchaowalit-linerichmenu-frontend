@@ -328,3 +328,9 @@ For issues, questions, or suggestions, please open an issue on the GitHub reposi
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Database powered by [PostgreSQL](https://www.postgresql.org/)
 - Deployed on [Vercel](https://vercel.com/)
+
+## Related
+
+- **Mobile App:** [bookchaowalit-linerichmenu-mobile](https://github.com/bookchaowalit-mobile/bookchaowalit-linerichmenu-mobile)
+- **Portfolio:** [bookchaowalit.com](https://bookchaowalit.com)
+
